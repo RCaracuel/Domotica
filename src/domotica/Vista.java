@@ -54,6 +54,7 @@ public class Vista {
                     break;
                 case 0:
                     System.out.println("Ha elegido apagar el sistema.");
+                    break;
             }
             System.out.println();
         }while(opcion!=0);
