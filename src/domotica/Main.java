@@ -13,7 +13,12 @@ public class Main {
     
     public static void main(String[] args) {
         
-       Vista.menu();
+       //Vista.menuu();
+       Garaje g1=new Garaje();
+       System.out.println(g1);
+       
+       Garaje g2=new Garaje(2,new Puerta(),50);
+       System.out.println(g2);
        
     }
 }
