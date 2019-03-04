@@ -61,48 +61,157 @@ public class Vista {
 //
 //    }
 
-    private static Scanner teclado = new Scanner (System.in);
     
-    public static Usuario login(){
-        
-    }
-    
-    public static Comando menuu() {
-        System.out.println("Bienvenido a la centralita");
-        System.out.println("--------------------------");
-        
-        System.out.println("Que es lo que es compae?");
-        System.out.println("1.- Reloj del sistema");
-        System.out.println("\t1.1- Consultar hora");
-        System.out.println("\t1.1- Consultar fecha");
-        System.out.println("\t1.1- Cambiar hora");
-        System.out.println("\t1.1- Cambiar fecha");
-        System.out.println("2.- Puerta de garaje");
-                 System.out.println("2.1- Consultar estado");
-                 System.out.println("2.2- Abrir puerta");
-                 System.out.println("2.3- Cerrar puerta");
-        System.out.println("3.-Estancia");
-                System.out.println("\t3.1-Salon");
-                    System.out.println("\t3.1.1- Consultar estado");
-                    System.out.println("\t3.1.2- Subir persiana");
-                    System.out.println("\t3.1.3- Bajar persiana");
-                    System.out.println("\t3.1.4- Encender luz");
-                    System.out.println("\t3.1.5- Apagar luz");
-                    System.out.println("\t3.1.6- Encender camara");
-                    System.out.println("\t3.1.7- Apagar camara");
-                System.out.println("\t3.2-Dormitorio");
-                    System.out.println("\t3.2.1- Consultar estado");
-                    System.out.println("\t3.2.2- Subir persiana");
-                    System.out.println("\t3.2.3- Bajar persiana");
-                    System.out.println("\t3.2.4- Encender luz");
-                    System.out.println("\t3.2.5- Apagar luz");
-                    System.out.println("\t3.2.6- Encender camara");
-                    System.out.println("\t3.2.7- Apagar camara");
-        System.out.println("4.-Estado general");
-        System.out.println("5.-Apagar sistema");
-  
-       
-        
+    static Scanner teclado = new Scanner(System.in);
+//    
+//    public static Usuario login(){
+//        
+//        return ;
+//    }
+    private static int opcion;
+
+    public static void menu() {
+
+        do {
+            System.out.println("MENÚ");
+            System.out.println("-------------");
+            System.out.println("Opción 1.Reloj del sistema");
+            System.out.println("Opción 2.Puerta del garaje");
+            System.out.println("Opción 3.Estancia");
+            System.out.println("Opción 4.Estado general");
+            System.out.println("0 para apagar Sistema");
+            System.out.println("---------------");
+            System.out.println("Elija una opción:");
+            opcion = teclado.nextInt();
+
+            switch (opcion) {
+                case 1:
+                    System.out.println("Ha elegido Reloj del sistema. Elija una opción:");
+                    System.out.println("\t1- Consultar hora");
+                    System.out.println("\t2- Consultar fecha");
+                    System.out.println("\t3- Cambiar hora");
+                    System.out.println("\t4- Cambiar fecha");
+                    System.out.println("0-Volver al menú");
+                    opcion = teclado.nextInt();
+
+                    switch (opcion) {
+                        case 0:
+                            break;
+                        case 1:
+                            //
+                            break;
+                        case 2:
+                            break;
+                        case 3:
+                            break;
+                        case 4:
+                            break;
+
+                    }
+                    break;
+                case 2:
+                    System.out.println("Ha elegigo puerta del garaje. Elija una opción:");
+                    System.out.println("1- Consultar estado");
+                    System.out.println("2- Abrir puerta");
+                    System.out.println("3- Cerrar puerta");
+                    System.out.println("0-Volver al menú");
+                    opcion = teclado.nextInt();
+                    switch (opcion) {
+                        case 0: 
+                            break;
+                        case 1:
+
+                            break;
+                        case 2:
+                            break;
+                        case 3:
+                            break;
+                    }
+                    break;
+                case 3:
+                    System.out.println("Ha elegido estancia. Elija una opción");
+                    System.out.println("1-Salón");
+                    System.out.println("2-Dormitorio");
+                    System.out.println("0-Volver al menú");
+                    opcion = teclado.nextInt();
+                    switch (opcion) {
+                        case 0:
+                            break;
+                        case 1:
+                            System.out.println("Ha elegido salón. Elija una opción:");
+                            System.out.println("1- Consultar estado");
+                            System.out.println("2- Subir persiana");
+                            System.out.println("3- Bajar persiana");
+                            System.out.println("4- Encender luz");
+                            System.out.println("5- Apagar luz");
+                            System.out.println("6- Encender camara");
+                            System.out.println("7- Apagar camara");
+                            System.out.println("0-Volver al menú");
+                            opcion=teclado.nextInt();
+                            switch (opcion) {
+                                case 0:
+                                    break;
+                                case 1:
+                                    
+                                    break;
+                                case 2:
+                                    break;
+                                case 3:
+                                    break;
+                                case 4:
+                                    break;
+                                case 5:
+                                    break;
+                                case 6:
+                                    break;
+                                case 7:
+                                    break;
+                            }
+                            break;
+                        case 2:
+                            System.out.println("Ha elegido dormitorio. Elija una opción:");
+                            System.out.println("Ha elegido salón. Elija una opción:");
+                            System.out.println("1- Consultar estado");
+                            System.out.println("2- Subir persiana");
+                            System.out.println("3- Bajar persiana");
+                            System.out.println("4- Encender luz");
+                            System.out.println("5- Apagar luz");
+                            System.out.println("6- Encender camara");
+                            System.out.println("7- Apagar camara");
+                            System.out.println("0-Volver al menú");
+                            opcion=teclado.nextInt();
+                            switch (opcion) {
+                                case 1:
+                                    
+                                    break;
+                                case 2:
+                                    break;
+                                case 3:
+                                    break;
+                                case 4:
+                                    break;
+                                case 5:
+                                    break;
+                                case 6:
+                                    break;
+                                case 7:
+                                    break;
+                                case 0:
+                                    break;
+                            }
+                            break;
+                    }
+                    break;
+                case 4:
+                    System.out.println("Ha elegido estado general");
+                    break;
+
+                case 0:
+                    System.out.println("Ha elegido apagar el sistema.");
+                    break;
+            }
+            System.out.println();
+        } while (opcion != 0);
 
     }
 }
