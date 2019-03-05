@@ -70,7 +70,7 @@ public class Vista {
 //    }
     private static int opcion;
 
-    public static void menu() {
+    public static Comando menu() {
 
         do {
             System.out.println("MENÚ");
@@ -87,25 +87,27 @@ public class Vista {
             switch (opcion) {
                 case 1:
                     System.out.println("Ha elegido Reloj del sistema. Elija una opción:");
-                    System.out.println("\t1- Consultar hora");
-                    System.out.println("\t2- Consultar fecha");
-                    System.out.println("\t3- Cambiar hora");
-                    System.out.println("\t4- Cambiar fecha");
+                    System.out.println("1- Consultar hora");
+                    System.out.println("2- Consultar fecha");
+                    System.out.println("3- Cambiar hora");
+                    System.out.println("4- Cambiar fecha");
                     System.out.println("0-Volver al menú");
                     opcion = teclado.nextInt();
 
                     switch (opcion) {
                         case 0:
-                            break;
+                            
+                            return Comando.VOLVER_MENU;
+                            
+                           
                         case 1:
-                            //
-                            break;
+                           return Comando.CONSULTAR_HORA;
                         case 2:
-                            break;
+                           return Comando.CONSULTAR_FECHA;
                         case 3:
-                            break;
+                            return Comando.MODIFICAR_HORA;
                         case 4:
-                            break;
+                            return Comando.MODIFICAR_FECHA;
 
                     }
                     break;
@@ -118,14 +120,15 @@ public class Vista {
                     opcion = teclado.nextInt();
                     switch (opcion) {
                         case 0: 
-                            break;
+                            
+                            return Comando.VOLVER_MENU;
                         case 1:
 
-                            break;
+                            return Comando.CONSULTAR_ESTADO_PUERTA_GAR;
                         case 2:
-                            break;
+                            return Comando.ABRIR_PUERTA_GAR;
                         case 3:
-                            break;
+                           return Comando.CERRAR_PUERTA_GAR;
                     }
                     break;
                 case 3:
@@ -136,82 +139,95 @@ public class Vista {
                     opcion = teclado.nextInt();
                     switch (opcion) {
                         case 0:
-                            break;
+                            return Comando.VOLVER_MENU;
+                            
                         case 1:
                             System.out.println("Ha elegido salón. Elija una opción:");
-                            System.out.println("1- Consultar estado");
+                            System.out.println("1- Consultar estado persiana");
                             System.out.println("2- Subir persiana");
                             System.out.println("3- Bajar persiana");
-                            System.out.println("4- Encender luz");
-                            System.out.println("5- Apagar luz");
-                            System.out.println("6- Encender camara");
-                            System.out.println("7- Apagar camara");
+                            System.out.println("4-Consultar estado de luz");
+                            System.out.println("5- Encender luz");
+                            System.out.println("6- Apagar luz");
+                            System.out.println("7-Consultar estado cámara");
+                            System.out.println("8- Encender camara");
+                            System.out.println("9- Apagar camara");
                             System.out.println("0-Volver al menú");
                             opcion=teclado.nextInt();
                             switch (opcion) {
                                 case 0:
-                                    break;
+                                    return Comando.VOLVER_MENU;
                                 case 1:
-                                    
-                                    break;
+                                   return Comando.CONSULTAR_ESTADO_PERSIANA_SAL;
+                                   
                                 case 2:
-                                    break;
+                                   return Comando.SUBIR_PERSIANA_SAL;
                                 case 3:
-                                    break;
+                                    return Comando.BAJAR_PERSIANA_SAL;
                                 case 4:
-                                    break;
+                                    return Comando.CONSULTAR_ESTADO_LUZ_SAL;
                                 case 5:
-                                    break;
+                                    return Comando.ENCENDER_LUZ_SAL;
                                 case 6:
-                                    break;
+                                   return Comando.APAGAR_LUZ_SAL;
                                 case 7:
-                                    break;
+                                   return Comando.CONSULTAR_ESTADO_CAMARA_SAL;
+                                case 8:
+                                    return Comando.ENCENDER_CAMARA_SAL;
+                                case 9:
+                                    return Comando.APAGAR_CAMARA_SAL;
                             }
                             break;
                         case 2:
                             System.out.println("Ha elegido dormitorio. Elija una opción:");
                             System.out.println("Ha elegido salón. Elija una opción:");
-                            System.out.println("1- Consultar estado");
+                            System.out.println("1- Consultar estado persiana");
                             System.out.println("2- Subir persiana");
                             System.out.println("3- Bajar persiana");
-                            System.out.println("4- Encender luz");
-                            System.out.println("5- Apagar luz");
-                            System.out.println("6- Encender camara");
-                            System.out.println("7- Apagar camara");
+                            System.out.println("4-Consultar estado de luz");
+                            System.out.println("5- Encender luz");
+                            System.out.println("6- Apagar luz");
+                            System.out.println("7-Consultar estado cámara");
+                            System.out.println("8- Encender camara");
+                            System.out.println("9- Apagar camara");
                             System.out.println("0-Volver al menú");
                             opcion=teclado.nextInt();
                             switch (opcion) {
                                 case 1:
-                                    
-                                    break;
+                                  return Comando.CONSULTAR_ESTADO_PERSIANA_DOR;
                                 case 2:
-                                    break;
+                                   return Comando.SUBIR_PERSIANA_DOR;
                                 case 3:
-                                    break;
+                                    return Comando.BAJAR_PERSIANA_DOR;
                                 case 4:
-                                    break;
+                                    return Comando.CONSULTAR_ESTADO_LUZ_DOR;
                                 case 5:
-                                    break;
+                                    return Comando.ENCENDER_LUZ_DOR;
                                 case 6:
-                                    break;
+                                    return Comando.APAGAR_LUZ_DOR;
                                 case 7:
-                                    break;
+                                    return Comando.CONSULTAR_ESTADO_CAMARA_DOR;
+                                case 8:
+                                    return Comando.ENCENDER_CAMARA_DOR;
+                                case 9:
+                                    return Comando.APAGAR_CAMARA_DOR;
                                 case 0:
-                                    break;
+                                    return Comando.VOLVER_MENU;
                             }
                             break;
                     }
                     break;
                 case 4:
                     System.out.println("Ha elegido estado general");
-                    break;
+                    return Comando.ESTADO_GENERAL;
 
                 case 0:
                     System.out.println("Ha elegido apagar el sistema.");
-                    break;
+                    return Comando.APAGAR_SISTEMA;
             }
             System.out.println();
         } while (opcion != 0);
+        return null;
 
     }
 }
