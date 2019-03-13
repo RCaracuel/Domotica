@@ -12,13 +12,17 @@ import java.time.LocalDate;
  * @author rafa
  */
 public class Centralita {
-    
+
     private Estancia garaje;
     private Estancia salon;
     private Estancia dormitorio;
-    private Usuario user;
+    private static Usuario usu = new Usuario("Rafa", "1234");
     private LocalDate fechaInstalacion;
     private String identificador;
-    
-    
+
+    public static boolean comprobacionUsuario() {
+
+        return usu.equals(Vista.login());
+
+    }
 }
