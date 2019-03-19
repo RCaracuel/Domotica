@@ -120,12 +120,23 @@ public class Centralita {
 
             case SUBIR_PERSIANA_SAL:
                 Persiana.subirPersiana(salon.getPersiana());
+                System.out.println("La persiana se ha subido");
                 break;
 
             case BAJAR_PERSIANA_SAL:
                 Persiana.bajarPersiana(salon.getPersiana());
+                System.out.println("La persiana se ha bajado");
                 break;
-
+            case CONSULTAR_ESTADO_LUZ_SAL:
+                Luz.estado(salon.getLuz());
+                break;
+            case ENCENDER_LUZ_SAL:
+                Luz.encenderLuz(salon.getLuz());
+                System.out.println("La luz se ha encendido");
+                
+            case APAGAR_LUZ_SAL:
+                Luz.apagarLuz(salon.getLuz());
+                System.out.println("La luz se ha apagado");
         }
     }
 
