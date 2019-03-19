@@ -16,13 +16,76 @@ public class Centralita {
     private Estancia garaje;
     private Estancia salon;
     private Estancia dormitorio;
-    private static Usuario usu = new Usuario("Rafa", "1234");
+    private Usuario usu;
     private LocalDate fechaInstalacion;
-    private String identificador;
+    private int identificador=00000;
 
-    public static boolean comprobacionUsuario() {
+    public Centralita() {
+        this.garaje = new Garaje();
+        this.salon = new Salon();
+        this.dormitorio = new Dormitorio();
+        this.usu = new Usuario("Rosa","123");
+        this.fechaInstalacion =LocalDate.now();
+        this.identificador++;
+    }
+ 
+    public  boolean comprobacionUsuario(Usuario aux) {
 
-        return usu.equals(Vista.login());
+        return this.usu.equals(aux);
 
     }
+
+  
+
+    public Estancia getGaraje() {
+        return garaje;
+    }
+
+    public void setGaraje(Estancia garaje) {
+        this.garaje = garaje;
+    }
+
+    public Estancia getSalon() {
+        return salon;
+    }
+
+    public void setSalon(Estancia salon) {
+        this.salon = salon;
+    }
+
+    public Estancia getDormitorio() {
+        return dormitorio;
+    }
+
+    public void setDormitorio(Estancia dormitorio) {
+        this.dormitorio = dormitorio;
+    }
+
+    public Usuario getUsu() {
+        return usu;
+    }
+
+    public void setUsu(Usuario usu) {
+        this.usu = usu;
+    }
+
+    public LocalDate getFechaInstalacion() {
+        return fechaInstalacion;
+    }
+
+    public void setFechaInstalacion(LocalDate fechaInstalacion) {
+        this.fechaInstalacion = fechaInstalacion;
+    }
+
+    public int getIdentificador() {
+        return identificador;
+    }
+
+    public void setIdentificador(int identificador) {
+        this.identificador = identificador;
+    }
+
+    
+   
+    
 }
