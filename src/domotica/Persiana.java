@@ -11,16 +11,47 @@ package domotica;
  */
 public class Persiana {
     
-    private EstadoPersianaSalon estado;
+    private static EstadoPersiana estado;
     private int largo; // cm
     private int ancho; // cm
 
-    public EstadoPersianaSalon getEstado() {
+    public EstadoPersiana getEstado() {
         return estado;
     }
 
-    public void setEstado(EstadoPersianaSalon estado) {
+    public void setEstado(EstadoPersiana estado) {
         this.estado = estado;
     }
+
+    public int getLargo() {
+        return largo;
+    }
+
+    public void setLargo(int largo) {
+        this.largo = largo;
+    }
+
+    public int getAncho() {
+        return ancho;
+    }
+
+    public void setAncho(int ancho) {
+        this.ancho = ancho;
+    }
     
+    public static String estado(Persiana aux){
+        
+        switch (aux.getEstado()) {
+            case SUBIDA:
+                return "La persiana está subida";
+          
+            case BAJADA:
+                return "La persiana está bajada";
+            case MITAD:
+                return "La persiana está a la mitad";
+          
+        }
+        
+        return "Error";
+    }
 }
