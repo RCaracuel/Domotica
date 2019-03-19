@@ -86,7 +86,14 @@ public class Centralita {
     }
 
     public static void ejecutarOrden(Comando aux){
-        
+        switch (aux) {
+            case VOLVER_MENU:
+                      Centralita.ejecutarOrden(Vista.menu());
+                break;
+            case CONSULTAR_HORA:
+                Reloj.mostrarHora();
+                break;
+        }
     }
    
     
