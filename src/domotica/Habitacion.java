@@ -14,5 +14,30 @@ public class Habitacion extends Estancia {
     private Luz luz;
     private Persiana persiana;
     private Camara camara;
+
+    public Luz getLuz() {
+        return luz;
+    }
+
+    public void setLuz(Luz luz) {
+        this.luz = luz;
+    }
+
+    public Persiana getPersiana() {
+        return persiana;
+    }
+
+    public void setPersiana(Persiana persiana) {
+        this.persiana = persiana;
+    }
+
+    public Camara getCamara() {
+        return camara;
+    }
+
+    public void setCamara(Camara camara) {
+        this.camara = camara;
+    }
+    
     
 }
