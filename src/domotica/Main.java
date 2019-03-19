@@ -29,7 +29,7 @@ public class Main {
         } while (!(nuevo.equals(tmp.getUsu()))&&contador<=5);
         
         if(tmp.comprobacionUsuario(nuevo)){
-            Vista.menu();
+            Centralita.ejecutarOrden(Vista.menu());
         }else{
             System.out.println("El usuario o clave es incorrecto");
         }
