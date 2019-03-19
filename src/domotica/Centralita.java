@@ -6,6 +6,8 @@
 package domotica;
 
 import java.time.LocalDate;
+import java.time.LocalTime;
+import java.util.Scanner;
 
 /**
  *
@@ -18,24 +20,22 @@ public class Centralita {
     private Estancia dormitorio;
     private Usuario usu;
     private LocalDate fechaInstalacion;
-    private int identificador=00000;
+    private int identificador = 00000;
 
     public Centralita() {
         this.garaje = new Garaje();
         this.salon = new Salon();
         this.dormitorio = new Dormitorio();
-        this.usu = new Usuario("Rosa","123");
-        this.fechaInstalacion =LocalDate.now();
+        this.usu = new Usuario("Rosa", "123");
+        this.fechaInstalacion = LocalDate.now();
         this.identificador++;
     }
- 
-    public  boolean comprobacionUsuario(Usuario aux) {
+
+    public boolean comprobacionUsuario(Usuario aux) {
 
         return this.usu.equals(aux);
 
     }
-
-  
 
     public Estancia getGaraje() {
         return garaje;
@@ -85,16 +85,28 @@ public class Centralita {
         this.identificador = identificador;
     }
 
-    public static void ejecutarOrden(Comando aux){
+    public static void ejecutarOrden(Comando aux) {
+        Scanner teclado= new Scanner(System.in);
         switch (aux) {
             case VOLVER_MENU:
-                      Centralita.ejecutarOrden(Vista.menu());
+                Centralita.ejecutarOrden(Vista.menu());
                 break;
             case CONSULTAR_HORA:
                 Reloj.mostrarHora();
                 break;
+            case CONSULTAR_FECHA:
+                Reloj.mostrarFecha();
+                break;
+            case MODIFICAR_HORA:
+                System.out.println("Introduzca hora:");
+                int hora=teclado.nextInt();
+                System.out.println("Introduzca minutos");
+                int minutos=teclado.nextInt();
+                Reloj.setHora(LocalTime.of(hora, minutos));
+                break;
+            case MODIFICAR_FECHA:
+                
         }
     }
-   
-    
+
 }
