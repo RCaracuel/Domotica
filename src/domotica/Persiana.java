@@ -53,5 +53,18 @@ public class Persiana {
         }
         
         return "Error";
+        
+    }
+    
+    public static void subirPersiana(Persiana aux){
+        if (aux.getEstado()==EstadoPersiana.BAJADA) {
+            aux.setEstado(EstadoPersiana.SUBIDA);
+        }
+    }
+    
+    public static void bajarPersiana(Persiana aux){
+        if (aux.getEstado()==EstadoPersiana.SUBIDA) {
+            aux.setEstado(EstadoPersiana.BAJADA);
+        }
     }
 }
