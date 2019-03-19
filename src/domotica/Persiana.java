@@ -11,7 +11,16 @@ package domotica;
  */
 public class Persiana {
     
-    private boolean estado;
+    private EstadoPersianaSalon estado;
     private int largo; // cm
     private int ancho; // cm
+
+    public EstadoPersianaSalon getEstado() {
+        return estado;
+    }
+
+    public void setEstado(EstadoPersianaSalon estado) {
+        this.estado = estado;
+    }
+    
 }
