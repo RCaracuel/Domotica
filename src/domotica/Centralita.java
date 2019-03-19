@@ -85,7 +85,9 @@ public class Centralita {
         this.identificador = identificador;
     }
 
-    
+    public static void ejecutarOrden(Comando aux){
+        
+    }
    
     
 }
