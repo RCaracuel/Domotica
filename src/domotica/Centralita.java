@@ -118,6 +118,7 @@ public class Centralita {
                 Persiana.estado(salon.getPersiana());
                 break;
 
+
             case SUBIR_PERSIANA_SAL:
                 Persiana.subirPersiana(salon.getPersiana());
                 System.out.println("La persiana se ha subido");
@@ -189,6 +190,7 @@ public class Centralita {
                 Camara.apagarCamara(dormitorio.getCamara());
                 System.out.println("La camara se ha apagado");
                 break;
+
         }
     }
 
