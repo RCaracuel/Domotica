@@ -43,7 +43,7 @@ public class Centralita {
     }
 
     public void setGaraje(Garaje garaje) {
-      garaje = garaje;
+        garaje = garaje;
     }
 
     public Estancia getSalon() {
@@ -107,17 +107,25 @@ public class Centralita {
                 break;
             case MODIFICAR_FECHA:
                 System.out.println("Introduzca mes en número");
-                int mes=teclado.nextInt();
+                int mes = teclado.nextInt();
                 System.out.println("Introduzca año");
-                int anio=teclado.nextInt();
+                int anio = teclado.nextInt();
                 System.out.println("Introduzca día ");
-                int dia= teclado.nextInt();
+                int dia = teclado.nextInt();
                 Reloj.setFecha(LocalDate.of(anio, mes, dia));
                 break;
             case CONSULTAR_ESTADO_PERSIANA_SAL:
                 Persiana.estado(salon.getPersiana());
                 break;
-                
+
+            case SUBIR_PERSIANA_SAL:
+                Persiana.subirPersiana(salon.getPersiana());
+                break;
+
+            case BAJAR_PERSIANA_SAL:
+                Persiana.bajarPersiana(salon.getPersiana());
+                break;
+
         }
     }
 
