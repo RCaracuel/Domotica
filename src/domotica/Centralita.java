@@ -133,10 +133,24 @@ public class Centralita {
             case ENCENDER_LUZ_SAL:
                 Luz.encenderLuz(salon.getLuz());
                 System.out.println("La luz se ha encendido");
-                
+                break;
             case APAGAR_LUZ_SAL:
                 Luz.apagarLuz(salon.getLuz());
                 System.out.println("La luz se ha apagado");
+                break;
+
+            case CONSULTAR_ESTADO_CAMARA_SAL:
+                Camara.estado(salon.getCamara());
+                break;
+
+            case ENCENDER_CAMARA_SAL:
+                Camara.encenderCamara(salon.getCamara());
+                System.out.println("La camara se ha encendido");
+                break;
+            case APAGAR_CAMARA_SAL:
+                Camara.apagarCamara(salon.getCamara());
+                System.out.println("La camara se ha apagado");
+                break;
         }
     }
 
