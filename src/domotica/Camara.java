@@ -45,4 +45,16 @@ public class Camara {
 
         return est;
     }
+
+    public static void encenderCamara(Camara aux) {
+        if (aux.isEstado() == false) {
+            aux.setEstado(true);
+        }
+    }
+
+    public static void apagarCamara(Camara aux) {
+        if (aux.isEstado() == true) {
+            aux.setEstado(false);
+        }
+    }
 }
