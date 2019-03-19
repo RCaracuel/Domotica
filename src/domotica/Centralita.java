@@ -7,6 +7,7 @@ package domotica;
 
 import java.time.LocalDate;
 import java.time.LocalTime;
+import java.time.Month;
 import java.util.Scanner;
 
 /**
@@ -86,7 +87,7 @@ public class Centralita {
     }
 
     public static void ejecutarOrden(Comando aux) {
-        Scanner teclado= new Scanner(System.in);
+        Scanner teclado = new Scanner(System.in);
         switch (aux) {
             case VOLVER_MENU:
                 Centralita.ejecutarOrden(Vista.menu());
@@ -99,12 +100,22 @@ public class Centralita {
                 break;
             case MODIFICAR_HORA:
                 System.out.println("Introduzca hora:");
-                int hora=teclado.nextInt();
+                int hora = teclado.nextInt();
                 System.out.println("Introduzca minutos");
-                int minutos=teclado.nextInt();
+                int minutos = teclado.nextInt();
                 Reloj.setHora(LocalTime.of(hora, minutos));
                 break;
             case MODIFICAR_FECHA:
+                System.out.println("Introduzca mes en número");
+                int mes=teclado.nextInt();
+                System.out.println("Introduzca año");
+                int anio=teclado.nextInt();
+                System.out.println("Introduzca día ");
+                int dia= teclado.nextInt();
+                Reloj.setFecha(LocalDate.of(anio, mes, dia));
+                break;
+            case CONSULTAR_ESTADO_PERSIANA_SAL:
+                break;
                 
         }
     }
