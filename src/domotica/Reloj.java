@@ -15,8 +15,9 @@ import java.time.LocalTime;
 public class Reloj {
     
     private static LocalTime hora;
+    private static LocalDate fecha;
 
-    public Reloj(LocalTime hora) {
+    public Reloj(LocalTime hora, LocalDate fecha) {
         this.hora = hora;
     }
     
@@ -37,8 +38,8 @@ public class Reloj {
     }
     
    
-   public static void setFecha(LocalTime aux){
-       hora=aux;
+   public static void setFecha(LocalDate aux){
+       fecha=aux;
    } 
 
 }
