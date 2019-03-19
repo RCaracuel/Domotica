@@ -25,4 +25,14 @@ public class Salon extends Habitacion {
 
 
 
+
+    public void setPersiana(Persiana persiana) {
+        persiana = persiana;
+    }
+    
+    public void setEstado(EstadoPersiana aux){
+        setEstado(aux);
+    }
+    
+
 }
