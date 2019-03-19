@@ -9,7 +9,7 @@ package domotica;
  *
  * @author Rafa
  */
-public enum EstadoPersianaSalon {
+public enum EstadoPersiana {
     SUBIDA(0,"Persiana subida"),
     BAJADA(1,"Persiana bajada"),
     MITAD(2,"Persiana por la mitad");
@@ -17,7 +17,7 @@ public enum EstadoPersianaSalon {
     private int codigo;
     private String descripcion;
 
-    private EstadoPersianaSalon(int codigo, String descripcion) {
+    private EstadoPersiana(int codigo, String descripcion) {
         this.codigo = codigo;
         this.descripcion = descripcion;
     }
