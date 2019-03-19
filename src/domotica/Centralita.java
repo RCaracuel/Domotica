@@ -16,25 +16,25 @@ import java.util.Scanner;
  */
 public class Centralita {
 
-    private Estancia garaje;
-    private Estancia salon;
-    private Estancia dormitorio;
-    private Usuario usu;
-    private LocalDate fechaInstalacion;
+    private static Garaje garaje;
+    private static Salon salon;
+    private static Dormitorio dormitorio;
+    private static Usuario usu;
+    private static LocalDate fechaInstalacion;
     private int identificador = 00000;
 
     public Centralita() {
-        this.garaje = new Garaje();
-        this.salon = new Salon();
-        this.dormitorio = new Dormitorio();
-        this.usu = new Usuario("Rosa", "123");
-        this.fechaInstalacion = LocalDate.now();
-        this.identificador++;
+        garaje = new Garaje();
+        salon = new Salon();
+        dormitorio = new Dormitorio();
+        usu = new Usuario("Rosa", "123");
+        fechaInstalacion = LocalDate.now();
+        identificador++;
     }
 
     public boolean comprobacionUsuario(Usuario aux) {
 
-        return this.usu.equals(aux);
+        return usu.equals(aux);
 
     }
 
@@ -42,24 +42,24 @@ public class Centralita {
         return garaje;
     }
 
-    public void setGaraje(Estancia garaje) {
-        this.garaje = garaje;
+    public void setGaraje(Garaje garaje) {
+      garaje = garaje;
     }
 
     public Estancia getSalon() {
         return salon;
     }
 
-    public void setSalon(Estancia salon) {
-        this.salon = salon;
+    public void setSalon(Salon salon) {
+        salon = salon;
     }
 
     public Estancia getDormitorio() {
         return dormitorio;
     }
 
-    public void setDormitorio(Estancia dormitorio) {
-        this.dormitorio = dormitorio;
+    public void setDormitorio(Dormitorio dormitorio) {
+        dormitorio = dormitorio;
     }
 
     public Usuario getUsu() {
@@ -67,7 +67,7 @@ public class Centralita {
     }
 
     public void setUsu(Usuario usu) {
-        this.usu = usu;
+        usu = usu;
     }
 
     public LocalDate getFechaInstalacion() {
@@ -75,7 +75,7 @@ public class Centralita {
     }
 
     public void setFechaInstalacion(LocalDate fechaInstalacion) {
-        this.fechaInstalacion = fechaInstalacion;
+        fechaInstalacion = fechaInstalacion;
     }
 
     public int getIdentificador() {
@@ -83,7 +83,7 @@ public class Centralita {
     }
 
     public void setIdentificador(int identificador) {
-        this.identificador = identificador;
+        identificador = identificador;
     }
 
     public static void ejecutarOrden(Comando aux) {
@@ -115,6 +115,7 @@ public class Centralita {
                 Reloj.setFecha(LocalDate.of(anio, mes, dia));
                 break;
             case CONSULTAR_ESTADO_PERSIANA_SAL:
+                Persiana.estado(salon.getPersiana());
                 break;
                 
         }
