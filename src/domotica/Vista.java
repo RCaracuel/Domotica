@@ -14,27 +14,25 @@ import java.util.Scanner;
 public class Vista {
 
     private static Scanner teclado = new Scanner(System.in);
-    private static String usuario;
-    private static String clave;
     private static int opcion;
 
-    public static Usuario login() {
+    public  static Usuario login() {
+        
+        
+        Usuario usu = new Usuario("pepito","1245");
+
 
         System.out.println("Introduce el usuario");
-        usuario = teclado.nextLine();
+        usu.setUser(teclado.nextLine());
 
         System.out.println("Introduce la contraseña");
-        clave = teclado.nextLine();
-
-        Usuario usu = new Usuario(usuario, clave);
+        usu.setPassword(teclado.nextLine());
 
         return usu;
 
     }
 
-    public static Comando menu() {
-        if (Centralita.comprobacionUsuario()) {
-            boolean continuar = true;
+    public  static Comando menu() {
 
             do {
                 System.out.println("MENÚ");
@@ -190,9 +188,7 @@ public class Vista {
                 }
                 System.out.println();
             } while (opcion != 0);
-        } else {
-            System.out.println("El usuario o clave es incorrecto");
-        }
+       
         return null;
 
     }
