@@ -10,9 +10,10 @@ package domotica;
  * @author rafa
  */
 public class Salon extends Habitacion {
-    
+
     private boolean terraza;
-    private static Persiana persiana;
+
+
 
     public boolean isTerraza() {
         return terraza;
@@ -22,14 +23,6 @@ public class Salon extends Habitacion {
         this.terraza = terraza;
     }
 
-    public Persiana getPersiana() {
-        return persiana;
-    }
 
-    public void setPersiana(Persiana persiana) {
-        this.persiana = persiana;
-    }
-    
-    
-            
+
 }
