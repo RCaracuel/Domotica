@@ -21,6 +21,11 @@ public class Usuario {
         this.password = password;
     }
 
+    @Override
+    public String toString() {
+        return "Usuario{" + "user=" + user + ", password=" + password + '}';
+    }
+
 
 
     public String getUser() {
