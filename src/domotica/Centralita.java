@@ -151,6 +151,44 @@ public class Centralita {
                 Camara.apagarCamara(salon.getCamara());
                 System.out.println("La camara se ha apagado");
                 break;
+
+            case CONSULTAR_ESTADO_PERSIANA_DOR:
+                Persiana.estado(dormitorio.getPersiana());
+                break;
+
+            case SUBIR_PERSIANA_DOR:
+                Persiana.subirPersiana(dormitorio.getPersiana());
+                System.out.println("La persiana se ha subido");
+                break;
+
+            case BAJAR_PERSIANA_DOR:
+                Persiana.bajarPersiana(dormitorio.getPersiana());
+                System.out.println("La persiana se ha bajado");
+                break;
+            case CONSULTAR_ESTADO_LUZ_DOR:
+                Luz.estado(dormitorio.getLuz());
+                break;
+            case ENCENDER_LUZ_DOR:
+                Luz.encenderLuz(dormitorio.getLuz());
+                System.out.println("La luz se ha encendido");
+                break;
+            case APAGAR_LUZ_DOR:
+                Luz.apagarLuz(dormitorio.getLuz());
+                System.out.println("La luz se ha apagado");
+                break;
+
+            case CONSULTAR_ESTADO_CAMARA_DOR:
+                Camara.estado(dormitorio.getCamara());
+                break;
+
+            case ENCENDER_CAMARA_DOR:
+                Camara.encenderCamara(dormitorio.getCamara());
+                System.out.println("La camara se ha encendido");
+                break;
+            case APAGAR_CAMARA_DOR:
+                Camara.apagarCamara(dormitorio.getCamara());
+                System.out.println("La camara se ha apagado");
+                break;
         }
     }
 
