@@ -20,6 +20,7 @@ public class Camara {
     }
 
     public Camara() {
+        this.estado=false;
     }
     
     
