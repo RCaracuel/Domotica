@@ -46,12 +46,16 @@ public class Luz {
     public static void encenderLuz(Luz aux) {
         if (aux.isEstado() == false) {
             aux.setEstado(true);
+        }else{
+            System.out.println("La luz ya está encendida");
         }
     }
 
     public static void apagarLuz(Luz aux) {
         if (aux.isEstado() == true) {
             aux.setEstado(false);
+        }else{
+            System.out.println("La luz ya está apagada");
         }
     }
 
