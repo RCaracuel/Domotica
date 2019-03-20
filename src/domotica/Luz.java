@@ -20,6 +20,7 @@ public class Luz {
     }
 
     public Luz() {
+        this.estado=false;
     }
     
     
