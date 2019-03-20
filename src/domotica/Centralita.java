@@ -88,15 +88,28 @@ public class Centralita {
 
     public static void ejecutarOrden(Comando aux) {
         Scanner teclado = new Scanner(System.in);
+        String resp;
         switch (aux) {
             case VOLVER_MENU:
                 Centralita.ejecutarOrden(Vista.menu());
                 break;
             case CONSULTAR_HORA:
                 Reloj.mostrarHora();
+                System.out.println("¿Desea volver al menú principal?");
+                resp = teclado.nextLine();
+                if (resp.equalsIgnoreCase("Si")) {
+                    Centralita.ejecutarOrden(Comando.VOLVER_MENU);
+                }
+              
                 break;
             case CONSULTAR_FECHA:
                 Reloj.mostrarFecha();
+                System.out.println("¿Desea volver al menú principal?");
+                resp = teclado.nextLine();
+                if (resp.equalsIgnoreCase("Si")) {
+                    Centralita.ejecutarOrden(Comando.VOLVER_MENU);
+                }
+              
                 break;
             case MODIFICAR_HORA:
                 System.out.println("Introduzca hora:");
@@ -104,6 +117,13 @@ public class Centralita {
                 System.out.println("Introduzca minutos");
                 int minutos = teclado.nextInt();
                 Reloj.setHora(LocalTime.of(hora, minutos));
+                System.out.println("Hora modificada correctamente");
+                System.out.println("¿Desea volver al menú principal?");
+                resp = teclado.nextLine();
+                if (resp.equalsIgnoreCase("Si")) {
+                    Centralita.ejecutarOrden(Comando.VOLVER_MENU);
+                }
+               
                 break;
             case MODIFICAR_FECHA:
                 System.out.println("Introduzca mes en número");
@@ -113,95 +133,218 @@ public class Centralita {
                 System.out.println("Introduzca día ");
                 int dia = teclado.nextInt();
                 Reloj.setFecha(LocalDate.of(anio, mes, dia));
+                System.out.println("Fecha modificada correctamente");
+                System.out.println("¿Desea volver al menú principal?");
+                resp = teclado.nextLine();
+                if (resp.equalsIgnoreCase("Si")) {
+                    Centralita.ejecutarOrden(Comando.VOLVER_MENU);
+                }
+              
                 break;
             case CONSULTAR_ESTADO_PERSIANA_SAL:
                 System.out.println(Persiana.estado(salon.getPersiana()));
+                System.out.println("¿Desea volver al menú principal?");
+                resp = teclado.nextLine();
+                if (resp.equalsIgnoreCase("Si")) {
+                    Centralita.ejecutarOrden(Comando.VOLVER_MENU);
+                }
+               
                 break;
 
             case SUBIR_PERSIANA_SAL:
                 Persiana.subirPersiana(salon.getPersiana());
                 System.out.println("La persiana se ha subido");
+                System.out.println("¿Desea volver al menú principal?");
+                resp = teclado.nextLine();
+                if (resp.equalsIgnoreCase("Si")) {
+                    Centralita.ejecutarOrden(Comando.VOLVER_MENU);
+                }
+              
                 break;
 
             case BAJAR_PERSIANA_SAL:
                 Persiana.bajarPersiana(salon.getPersiana());
                 System.out.println("La persiana se ha bajado");
+                System.out.println("¿Desea volver al menú principal?");
+                resp = teclado.nextLine();
+                if (resp.equalsIgnoreCase("Si")) {
+                    Centralita.ejecutarOrden(Comando.VOLVER_MENU);
+                }
                 break;
             case CONSULTAR_ESTADO_LUZ_SAL:
                 System.out.println(Luz.estado(salon.getLuz()));
+                System.out.println("¿Desea volver al menú principal?");
+                resp = teclado.nextLine();
+                if (resp.equalsIgnoreCase("Si")) {
+                    Centralita.ejecutarOrden(Comando.VOLVER_MENU);
+                }
                 break;
             case ENCENDER_LUZ_SAL:
                 Luz.encenderLuz(salon.getLuz());
                 System.out.println("La luz se ha encendido");
+                System.out.println("¿Desea volver al menú principal?");
+                resp = teclado.nextLine();
+                if (resp.equalsIgnoreCase("Si")) {
+                    Centralita.ejecutarOrden(Comando.VOLVER_MENU);
+                }
                 break;
             case APAGAR_LUZ_SAL:
                 Luz.apagarLuz(salon.getLuz());
                 System.out.println("La luz se ha apagado");
+                System.out.println("¿Desea volver al menú principal?");
+                resp = teclado.nextLine();
+                if (resp.equalsIgnoreCase("Si")) {
+                    Centralita.ejecutarOrden(Comando.VOLVER_MENU);
+                }
                 break;
 
             case CONSULTAR_ESTADO_CAMARA_SAL:
                 System.out.println(Camara.estado(salon.getCamara()));
+                System.out.println("¿Desea volver al menú principal?");
+                resp = teclado.nextLine();
+                if (resp.equalsIgnoreCase("Si")) {
+                    Centralita.ejecutarOrden(Comando.VOLVER_MENU);
+                }
+
                 break;
 
             case ENCENDER_CAMARA_SAL:
                 Camara.encenderCamara(salon.getCamara());
                 System.out.println("La camara se ha encendido");
+                System.out.println("¿Desea volver al menú principal?");
+                resp = teclado.nextLine();
+                if (resp.equalsIgnoreCase("Si")) {
+                    Centralita.ejecutarOrden(Comando.VOLVER_MENU);
+                }
                 break;
             case APAGAR_CAMARA_SAL:
                 Camara.apagarCamara(salon.getCamara());
                 System.out.println("La camara se ha apagado");
+                System.out.println("¿Desea volver al menú principal?");
+                resp = teclado.nextLine();
+                if (resp.equalsIgnoreCase("Si")) {
+                    Centralita.ejecutarOrden(Comando.VOLVER_MENU);
+                }
+
                 break;
 
             case CONSULTAR_ESTADO_PERSIANA_DOR:
                 System.out.println(Persiana.estado(dormitorio.getPersiana()));
+                System.out.println("¿Desea volver al menú principal?");
+                resp = teclado.nextLine();
+                if (resp.equalsIgnoreCase("Si")) {
+                    Centralita.ejecutarOrden(Comando.VOLVER_MENU);
+                }
                 break;
 
             case SUBIR_PERSIANA_DOR:
                 Persiana.subirPersiana(dormitorio.getPersiana());
                 System.out.println("La persiana se ha subido");
+                System.out.println("¿Desea volver al menú principal?");
+                resp = teclado.nextLine();
+                if (resp.equalsIgnoreCase("Si")) {
+                    Centralita.ejecutarOrden(Comando.VOLVER_MENU);
+                }
                 break;
 
             case BAJAR_PERSIANA_DOR:
                 Persiana.bajarPersiana(dormitorio.getPersiana());
                 System.out.println("La persiana se ha bajado");
+                System.out.println("¿Desea volver al menú principal?");
+                resp = teclado.nextLine();
+                if (resp.equalsIgnoreCase("Si")) {
+                    Centralita.ejecutarOrden(Comando.VOLVER_MENU);
+                }
                 break;
             case CONSULTAR_ESTADO_LUZ_DOR:
                 System.out.println(Luz.estado(dormitorio.getLuz()));
+                System.out.println("¿Desea volver al menú principal?");
+                resp = teclado.nextLine();
+                if (resp.equalsIgnoreCase("Si")) {
+                    Centralita.ejecutarOrden(Comando.VOLVER_MENU);
+                }
+
                 break;
             case ENCENDER_LUZ_DOR:
                 Luz.encenderLuz(dormitorio.getLuz());
                 System.out.println("La luz se ha encendido");
+                System.out.println("¿Desea volver al menú principal?");
+                resp = teclado.nextLine();
+                if (resp.equalsIgnoreCase("Si")) {
+                    Centralita.ejecutarOrden(Comando.VOLVER_MENU);
+                }
                 break;
             case APAGAR_LUZ_DOR:
                 Luz.apagarLuz(dormitorio.getLuz());
                 System.out.println("La luz se ha apagado");
+                System.out.println("¿Desea volver al menú principal?");
+                resp = teclado.nextLine();
+                if (resp.equalsIgnoreCase("Si")) {
+                    Centralita.ejecutarOrden(Comando.VOLVER_MENU);
+                }
+
                 break;
 
             case CONSULTAR_ESTADO_CAMARA_DOR:
                 System.out.println(Camara.estado(dormitorio.getCamara()));
+                System.out.println("¿Desea volver al menú principal?");
+                resp = teclado.nextLine();
+                if (resp.equalsIgnoreCase("Si")) {
+                    Centralita.ejecutarOrden(Comando.VOLVER_MENU);
+                }
+
                 break;
 
             case ENCENDER_CAMARA_DOR:
                 Camara.encenderCamara(dormitorio.getCamara());
                 System.out.println("La camara se ha encendido");
+                System.out.println("¿Desea volver al menú principal?");
+                resp = teclado.nextLine();
+                if (resp.equalsIgnoreCase("Si")) {
+                    Centralita.ejecutarOrden(Comando.VOLVER_MENU);
+                }
                 break;
             case APAGAR_CAMARA_DOR:
                 Camara.apagarCamara(dormitorio.getCamara());
                 System.out.println("La camara se ha apagado");
+                System.out.println("¿Desea volver al menú principal?");
+                resp = teclado.nextLine();
+                if (resp.equalsIgnoreCase("Si")) {
+                    Centralita.ejecutarOrden(Comando.VOLVER_MENU);
+                }
+
                 break;
 
             case CONSULTAR_ESTADO_PUERTA_GAR:
                 System.out.println(Puerta.estado(garaje.getPuertaAutomatica()));
+                System.out.println("¿Desea volver al menú principal?");
+                resp = teclado.nextLine();
+                if (resp.equalsIgnoreCase("Si")) {
+                    Centralita.ejecutarOrden(Comando.VOLVER_MENU);
+                }
+
                 break;
 
             case ABRIR_PUERTA_GAR:
                 Puerta.subirPuerta(garaje.getPuertaAutomatica());
                 System.out.println("La puerta del garaje se ha subido");
+                System.out.println("¿Desea volver al menú principal?");
+                resp = teclado.nextLine();
+                if (resp.equalsIgnoreCase("Si")) {
+                    Centralita.ejecutarOrden(Comando.VOLVER_MENU);
+                }
+
                 break;
 
             case CERRAR_PUERTA_GAR:
                 Puerta.bajarPuerta(garaje.getPuertaAutomatica());
                 System.out.println("La puerta del garaje se ha bajado");
+                System.out.println("¿Desea volver al menú principal?");
+                resp = teclado.nextLine();
+                if (resp.equalsIgnoreCase("Si")) {
+                    Centralita.ejecutarOrden(Comando.VOLVER_MENU);
+                }
+                
                 break;
 
             case ESTADO_GENERAL:
@@ -212,7 +355,12 @@ public class Centralita {
                 System.out.println("Cámara dormitorio: " + Camara.estado(dormitorio.getCamara()));
                 System.out.println("Persiana dormitorio: " + dormitorio.getPersiana().getEstado());
                 System.out.println("Luz dormitorio: " + Luz.estado(dormitorio.getLuz()));
-                System.out.println("Puerta del garaje: "+Puerta.estado(garaje.getPuertaAutomatica()));
+                System.out.println("Puerta del garaje: " + Puerta.estado(garaje.getPuertaAutomatica()));
+                System.out.println("¿Desea volver al menú principal?");
+                resp = teclado.nextLine();
+                if (resp.equalsIgnoreCase("Si")) {
+                    Centralita.ejecutarOrden(Comando.VOLVER_MENU);
+                }
                 break;
             case APAGAR_SISTEMA:
                 System.out.println("Apagando sistema");
