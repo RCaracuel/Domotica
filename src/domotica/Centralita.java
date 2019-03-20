@@ -213,6 +213,10 @@ public class Centralita {
                 System.out.println("Persiana dormitorio: " + dormitorio.getPersiana().getEstado());
                 System.out.println("Luz dormitorio: " + Luz.estado(dormitorio.getLuz()));
                 System.out.println("Puerta del garaje: "+Puerta.estado(garaje.getPuertaAutomatica()));
+                break;
+            case APAGAR_SISTEMA:
+                System.out.println("Apagando sistema");
+                break;
         }
     }
 
