@@ -11,7 +11,7 @@ package domotica;
  */
 public class Persiana {
     
-    private static EstadoPersiana estado;
+    private EstadoPersiana estado;
     private int largo; // cm
     private int ancho; // cm
 
@@ -67,4 +67,11 @@ public class Persiana {
             aux.setEstado(EstadoPersiana.BAJADA);
         }
     }
+
+    @Override
+    public String toString() {
+        return "Persiana{" + "estado=" + estado + ", largo=" + largo + ", ancho=" + ancho + '}';
+    }
+    
+    
 }
