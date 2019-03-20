@@ -13,7 +13,13 @@ public class Salon extends Habitacion {
 
     private boolean terraza;
 
+    public Salon(boolean terraza, Luz luz, Persiana persiana, Camara camara, int m2) {
+        super(luz, persiana, camara, m2);
+        this.terraza = terraza;
+    }
 
+    public Salon() {
+    }
 
     public boolean isTerraza() {
         return terraza;
@@ -23,16 +29,9 @@ public class Salon extends Habitacion {
         this.terraza = terraza;
     }
 
-
-
-
-    public void setPersiana(Persiana persiana) {
-        persiana = persiana;
+    @Override
+    public String toString() {
+        return "Salon{" + "terraza=" + terraza + '}';
     }
-    
-    public void setEstado(EstadoPersiana aux){
-        setEstado(aux);
-    }
-    
 
 }
