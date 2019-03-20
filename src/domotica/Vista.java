@@ -62,7 +62,7 @@ public class Vista {
                                 return Comando.VOLVER_MENU;
 
                             case 1:
-                                return Comando.CONSULTAR_HORA;
+                                return Comando.CONSULTAR_HORA;                            
                             case 2:
                                 return Comando.CONSULTAR_FECHA;
                             case 3:
@@ -141,7 +141,6 @@ public class Vista {
                                 break;
                             case 2:
                                 System.out.println("Ha elegido dormitorio. Elija una opción:");
-                                System.out.println("Ha elegido salón. Elija una opción:");
                                 System.out.println("1- Consultar estado persiana");
                                 System.out.println("2- Subir persiana");
                                 System.out.println("3- Bajar persiana");
