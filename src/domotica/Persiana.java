@@ -59,12 +59,16 @@ public class Persiana {
     public static void subirPersiana(Persiana aux){
         if (aux.getEstado()==EstadoPersiana.BAJADA) {
             aux.setEstado(EstadoPersiana.SUBIDA);
+        }else{
+            System.out.println("La persiana ya está subida");
         }
     }
     
     public static void bajarPersiana(Persiana aux){
         if (aux.getEstado()==EstadoPersiana.SUBIDA) {
             aux.setEstado(EstadoPersiana.BAJADA);
+        }else{
+            System.out.println("La persiana ya está bajada");
         }
     }
 
