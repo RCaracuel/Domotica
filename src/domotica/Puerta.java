@@ -20,6 +20,7 @@ public class Puerta {
     }
 
     public Puerta() {
+        this.estado=true;
     }
 
     public boolean isEstado() {
