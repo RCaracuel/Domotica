@@ -153,7 +153,7 @@ public class Centralita {
                 break;
 
             case CONSULTAR_ESTADO_PERSIANA_DOR:
-                System.out.println( Persiana.estado(dormitorio.getPersiana()));
+                System.out.println(Persiana.estado(dormitorio.getPersiana()));
                 break;
 
             case SUBIR_PERSIANA_DOR:
@@ -166,7 +166,7 @@ public class Centralita {
                 System.out.println("La persiana se ha bajado");
                 break;
             case CONSULTAR_ESTADO_LUZ_DOR:
-                System.out.println( Luz.estado(dormitorio.getLuz()));
+                System.out.println(Luz.estado(dormitorio.getLuz()));
                 break;
             case ENCENDER_LUZ_DOR:
                 Luz.encenderLuz(dormitorio.getLuz());
@@ -203,6 +203,16 @@ public class Centralita {
                 Puerta.bajarPuerta(garaje.getPuertaAutomatica());
                 System.out.println("La puerta del garaje se ha bajado");
                 break;
+
+            case ESTADO_GENERAL:
+                System.out.println("Estado General de la vivienda:");
+                System.out.println("Cámara salón: " + Camara.estado(salon.getCamara()));
+                System.out.println("Persiana salón: " + salon.getPersiana().getEstado());
+                System.out.println("Luz salón: " + Luz.estado(salon.getLuz()));
+                System.out.println("Cámara dormitorio: " + Camara.estado(dormitorio.getCamara()));
+                System.out.println("Persiana dormitorio: " + dormitorio.getPersiana().getEstado());
+                System.out.println("Luz dormitorio: " + Luz.estado(dormitorio.getLuz()));
+                System.out.println("Puerta del garaje: "+Puerta.estado(garaje.getPuertaAutomatica()));
         }
     }
 
