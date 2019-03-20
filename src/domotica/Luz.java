@@ -19,6 +19,11 @@ public class Luz {
         this.consumo = consumo;
     }
 
+    public Luz() {
+    }
+    
+    
+
     public boolean isEstado() {
         return estado;
     }
@@ -48,6 +53,11 @@ public class Luz {
         if (aux.isEstado() == true) {
             aux.setEstado(false);
         }
+    }
+
+    @Override
+    public String toString() {
+        return "Luz{" + "estado=" + estado + ", consumo=" + consumo + '}';
     }
 
 }
