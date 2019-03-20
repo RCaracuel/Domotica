@@ -15,6 +15,20 @@ public class Habitacion extends Estancia {
     private Persiana persiana;
     private Camara camara;
 
+      public Habitacion(Luz luz, Persiana persiana, Camara camara, int m2) {
+        super(m2);
+        this.luz = luz;
+        this.persiana = persiana;
+        this.camara = camara;
+    }
+
+    public Habitacion() {
+        super();
+        this.camara = new Camara();
+        this.luz = new Luz();
+        this.persiana = new Persiana();
+    }
+
     public Luz getLuz() {
         return luz;
     }
@@ -38,6 +52,10 @@ public class Habitacion extends Estancia {
     public void setCamara(Camara camara) {
         this.camara = camara;
     }
-    
+
+    @Override
+    public String toString() {
+        return "Habitacion{" + "luz=" + luz + ", persiana=" + persiana + ", camara=" + camara + '}';
+    }
     
 }
