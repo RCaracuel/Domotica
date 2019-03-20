@@ -115,7 +115,7 @@ public class Centralita {
                 Reloj.setFecha(LocalDate.of(anio, mes, dia));
                 break;
             case CONSULTAR_ESTADO_PERSIANA_SAL:
-                Persiana.estado(salon.getPersiana());
+                System.out.println(Persiana.estado(salon.getPersiana()));
                 break;
 
             case SUBIR_PERSIANA_SAL:
@@ -128,7 +128,7 @@ public class Centralita {
                 System.out.println("La persiana se ha bajado");
                 break;
             case CONSULTAR_ESTADO_LUZ_SAL:
-                Luz.estado(salon.getLuz());
+                System.out.println(Luz.estado(salon.getLuz()));
                 break;
             case ENCENDER_LUZ_SAL:
                 Luz.encenderLuz(salon.getLuz());
@@ -140,7 +140,7 @@ public class Centralita {
                 break;
 
             case CONSULTAR_ESTADO_CAMARA_SAL:
-                Camara.estado(salon.getCamara());
+                System.out.println(Camara.estado(salon.getCamara()));
                 break;
 
             case ENCENDER_CAMARA_SAL:
@@ -153,7 +153,7 @@ public class Centralita {
                 break;
 
             case CONSULTAR_ESTADO_PERSIANA_DOR:
-                Persiana.estado(dormitorio.getPersiana());
+                System.out.println( Persiana.estado(dormitorio.getPersiana()));
                 break;
 
             case SUBIR_PERSIANA_DOR:
@@ -166,7 +166,7 @@ public class Centralita {
                 System.out.println("La persiana se ha bajado");
                 break;
             case CONSULTAR_ESTADO_LUZ_DOR:
-                Luz.estado(dormitorio.getLuz());
+                System.out.println( Luz.estado(dormitorio.getLuz()));
                 break;
             case ENCENDER_LUZ_DOR:
                 Luz.encenderLuz(dormitorio.getLuz());
@@ -178,7 +178,7 @@ public class Centralita {
                 break;
 
             case CONSULTAR_ESTADO_CAMARA_DOR:
-                Camara.estado(dormitorio.getCamara());
+                System.out.println(Camara.estado(dormitorio.getCamara()));
                 break;
 
             case ENCENDER_CAMARA_DOR:
@@ -191,7 +191,7 @@ public class Centralita {
                 break;
 
             case CONSULTAR_ESTADO_PUERTA_GAR:
-                Puerta.estado(garaje.getPuertaAutomatica());
+                System.out.println(Puerta.estado(garaje.getPuertaAutomatica()));
                 break;
 
             case ABRIR_PUERTA_GAR:
