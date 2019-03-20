@@ -15,6 +15,13 @@ public class Persiana {
     private int largo; // cm
     private int ancho; // cm
 
+    public Persiana() {
+        this.estado= EstadoPersiana.MITAD;
+        
+    }
+    
+    
+
     public EstadoPersiana getEstado() {
         return estado;
     }
