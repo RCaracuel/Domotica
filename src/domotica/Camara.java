@@ -19,6 +19,11 @@ public class Camara {
         this.ip = ip;
     }
 
+    public Camara() {
+    }
+    
+    
+
     public boolean isEstado() {
         return estado;
     }
@@ -57,4 +62,12 @@ public class Camara {
             aux.setEstado(false);
         }
     }
+
+    @Override
+    public String toString() {
+        return "Camara{" + "estado=" + estado + ", ip=" + ip + '}';
+    }
+    
+    
+    
 }
