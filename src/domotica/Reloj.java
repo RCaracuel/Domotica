@@ -14,11 +14,16 @@ import java.time.LocalTime;
  */
 public class Reloj {
     
-    private static LocalTime hora;
-    private static LocalDate fecha;
+    static LocalTime hora;
+    static LocalDate fecha;
 
     public Reloj(LocalTime hora, LocalDate fecha) {
-        this.hora = hora;
+        this.hora = LocalTime.now();
+        this.fecha=LocalDate.now();
+    }
+    public Reloj(){
+        this.hora = LocalTime.now();
+        this.fecha=LocalDate.now();
     }
     
     
