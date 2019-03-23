@@ -21,6 +21,7 @@ public class Centralita {
     private static Dormitorio dormitorio;
     private static Usuario usu;
     private static LocalDate fechaInstalacion;
+    private static LocalTime reloj;
     private int identificador = 00000;
 
     public Centralita() {
@@ -30,6 +31,7 @@ public class Centralita {
         usu = new Usuario("Rosa", "123");
         fechaInstalacion = LocalDate.now();
         identificador++;
+        reloj=LocalTime.now();
     }
 
     public boolean comprobacionUsuario(Usuario aux) {
@@ -73,6 +75,15 @@ public class Centralita {
     public LocalDate getFechaInstalacion() {
         return fechaInstalacion;
     }
+
+    public static LocalTime getReloj() {
+        return reloj;
+    }
+
+    public static void setReloj(LocalTime reloj) {
+        Centralita.reloj = reloj;
+    }
+
 
     public void setFechaInstalacion(LocalDate fechaInstalacion) {
         fechaInstalacion = fechaInstalacion;
@@ -151,12 +162,23 @@ public class Centralita {
                 System.out.println("La luz se ha encendido");
                 Centralita.ejecutarOrden(Vista.menu());
                 break;
-            case APAGAR_LUZ_SAL:
+            case APAGAR_LUZ_SAL_MANUAL:
                 Luz.apagarLuz(salon.getLuz());
                 System.out.println("La luz se ha apagado");
                 Centralita.ejecutarOrden(Vista.menu());
                 break;
+            case APAGAR_LUZ_GENERAL:
+                Luz.apagarLuz(salon.getLuz());
+                Luz.apagarLuz(dormitorio.getLuz());
+                System.out.println("La orden se ha ejecutado correctamente");
+                Centralita.ejecutarOrden(Vista.menu());
+                Centralita.ejecutarOrden(Vista.menu());
+                break;
+            case APAGADO_ECO:
+                Luz.apagadoEco();
+                System.out.println("La orden se ha ejecutado correctamente");
 
+                break;
             case CONSULTAR_ESTADO_CAMARA_SAL:
                 System.out.println(Camara.estado(salon.getCamara()));
                 Centralita.ejecutarOrden(Vista.menu());
