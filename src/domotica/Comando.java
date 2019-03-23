@@ -38,7 +38,9 @@ public enum Comando {
     BAJAR_PERSIANA_SAL(21, "Baja persiana"),
     CONSULTAR_ESTADO_LUZ_SAL(22, "Consulta el estado de la luz"),
     ENCENDER_LUZ_SAL(23, "Enciende la luz"),
-    APAGAR_LUZ_SAL(24, "Apaga la luz"),
+    APAGAR_LUZ_SAL_MANUAL(24, "Apaga la luz de forma manual"),
+    APAGAR_LUZ_GENERAL(28,"Apaga la luz de todas las estancias"),
+    APAGADO_ECO(29,"Apaga las luces que detecte encendidas entre las 8a.m y s p.m"),
     CONSULTAR_ESTADO_CAMARA_SAL(25, "Consulta el estado de la camara"),
     ENCENDER_CAMARA_SAL(26, "Enciende la camara"),
     APAGAR_CAMARA_SAL(27, "Apaga la camara");
