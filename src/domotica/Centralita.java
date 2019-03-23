@@ -267,6 +267,10 @@ public class Centralita {
 
             case ESTADO_GENERAL:
                 System.out.println("Estado General de la vivienda:");
+                System.out.println("Hora de la centralita: ");
+                Reloj.mostrarHora();
+                System.out.println("Fecha de la centralita: ");
+                Reloj.mostrarFecha();
                 System.out.println("Cámara salón: " + Camara.estado(salon.getCamara()));
                 System.out.println("Persiana salón: " + salon.getPersiana().getEstado());
                 System.out.println("Luz salón: " + Luz.estado(salon.getLuz()));
