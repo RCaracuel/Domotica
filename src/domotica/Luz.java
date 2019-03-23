@@ -5,6 +5,8 @@
  */
 package domotica;
 
+import java.time.LocalTime;
+
 /**
  *
  * @author rafa
@@ -60,6 +62,17 @@ public class Luz {
         }
     }
 
+    public static void apagadoEco(){
+        LocalTime uno= LocalTime.of(8, 00);
+        LocalTime dos= LocalTime.of(18, 00);
+        if(Centralita.getReloj().isAfter(uno)&&Centralita.getReloj().isBefore(dos)){
+           
+            Centralita.ejecutarOrden(Comando.APAGAR_LUZ_GENERAL);
+            
+        }else{
+            System.out.println("No se encuentra en el rango de hora correcto para el apagado eco");
+        }
+    }
     @Override
     public String toString() {
         return "Luz{" + "estado=" + estado + ", consumo=" + consumo + '}';
