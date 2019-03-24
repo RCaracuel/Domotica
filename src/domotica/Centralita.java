@@ -16,6 +16,7 @@ import java.util.Scanner;
  */
 public class Centralita {
 
+    // Atributos
     private static Garaje garaje;
     private static Salon salon;
     private static Dormitorio dormitorio;
@@ -24,6 +25,7 @@ public class Centralita {
     private static LocalTime reloj;
     private int identificador = 00000;
 
+    // Constructor por defecto
     public Centralita() {
         garaje = new Garaje();
         salon = new Salon();
@@ -34,12 +36,14 @@ public class Centralita {
         reloj=LocalTime.now();
     }
 
+    // Metodo para comprobar el usuario que comprueba si el usuario es igual al que ya tenemos ("Rosa","123")
     public boolean comprobacionUsuario(Usuario aux) {
 
         return usu.equals(aux);
 
     }
 
+    // Getters y setters
     public Estancia getGaraje() {
         return garaje;
     }
@@ -97,6 +101,8 @@ public class Centralita {
         identificador = identificador;
     }
 
+    // Metodo de ejecutar las ordenes donde se le pasa un comando y a traves de ese comando hacemos los diferentes casos donde
+    // en cada vamos llamado a cada metodo correspondiente
     public static void ejecutarOrden(Comando aux) {
         Scanner teclado = new Scanner(System.in);
         String resp;
