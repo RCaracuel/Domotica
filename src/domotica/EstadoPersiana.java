@@ -10,16 +10,28 @@ package domotica;
  * @author Rafa
  */
 public enum EstadoPersiana {
-    SUBIDA(0,"Persiana subida"),
-    BAJADA(1,"Persiana bajada"),
-    MITAD(2,"Persiana por la mitad");
-    
+    SUBIDA(0, "Persiana subida"),
+    BAJADA(1, "Persiana bajada"),
+    MITAD(2, "Persiana por la mitad");
+
     private int codigo;
     private String descripcion;
 
     private EstadoPersiana(int codigo, String descripcion) {
         this.codigo = codigo;
         this.descripcion = descripcion;
+    }
+
+    public static EstadoPersiana getSUBIDA() {
+        return SUBIDA;
+    }
+
+    public static EstadoPersiana getBAJADA() {
+        return BAJADA;
+    }
+
+    public static EstadoPersiana getMITAD() {
+        return MITAD;
     }
 
     public int getCodigo() {
@@ -37,4 +49,5 @@ public enum EstadoPersiana {
     public void setDescripcion(String descripcion) {
         this.descripcion = descripcion;
     }
+
 }
