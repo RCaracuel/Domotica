@@ -10,18 +10,22 @@ package domotica;
  * @author rafa
  */
 public class Habitacion extends Estancia {
-    
+
+    // Atributos
     private Luz luz;
     private Persiana persiana;
     private Camara camara;
 
-      public Habitacion(Luz luz, Persiana persiana, Camara camara, int m2) {
+    // Constructor parametrizado
+    public Habitacion(Luz luz, Persiana persiana, Camara camara, int m2) {
         super(m2);
         this.luz = luz;
         this.persiana = persiana;
         this.camara = camara;
     }
 
+    
+    // Constructor por defecto
     public Habitacion() {
         super();
         this.camara = new Camara();
@@ -29,6 +33,7 @@ public class Habitacion extends Estancia {
         this.persiana = new Persiana();
     }
 
+    // Getters y setters
     public Luz getLuz() {
         return luz;
     }
@@ -53,9 +58,10 @@ public class Habitacion extends Estancia {
         this.camara = camara;
     }
 
+    // toString
     @Override
     public String toString() {
         return "Habitacion{" + "luz=" + luz + ", persiana=" + persiana + ", camara=" + camara + '}';
     }
-    
+
 }
