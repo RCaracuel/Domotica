@@ -13,38 +13,43 @@ import java.time.LocalTime;
  * @author rafa
  */
 public class Reloj {
-    
-    static LocalTime hora;
-    static LocalDate fecha;
 
+    // Atributos
+    public static LocalTime hora;
+    public static LocalDate fecha;
+
+    // Constructor parametrizado
     public Reloj(LocalTime hora, LocalDate fecha) {
         this.hora = LocalTime.now();
-        this.fecha=LocalDate.now();
+        this.fecha = LocalDate.now();
     }
-    public Reloj(){
+
+    // Constructor por defecto
+    public Reloj() {
         this.hora = LocalTime.now();
-        this.fecha=LocalDate.now();
+        this.fecha = LocalDate.now();
     }
-    
-    
-    public static void mostrarHora(){
+
+    // Metodo para mostrar la hora
+    public static void mostrarHora() {
         LocalTime hora = LocalTime.now();
         System.out.println(hora);
     }
-    
-    public static void mostrarFecha(){
+
+    // Metodo para mostrar la fecha
+    public static void mostrarFecha() {
         LocalDate fecha = LocalDate.now();
         System.out.println(fecha);
     }
 
-
+    // Metodo para establecer una hora
     public static void setHora(LocalTime aux) {
         hora = aux;
     }
-    
-   
-   public static void setFecha(LocalDate aux){
-       fecha=aux;
-   } 
+
+    // Metodo para establecer una fecha
+    public static void setFecha(LocalDate aux) {
+        fecha = aux;
+    }
 
 }
