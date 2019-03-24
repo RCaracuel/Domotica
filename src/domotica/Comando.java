@@ -14,6 +14,8 @@ public enum Comando {
     // Los tipos ENUM tienen dos características fundamentales:
     // 1.- El constructor es privado
     // 2.- Solo pueden instanciarse con un tipo de objeto concreto
+    
+    // Todos los comandos usados
     APAGAR_SISTEMA(0, "Apagar sistema"),
     CONSULTAR_HORA(1, "Consulta la hora del sistema"),
     MODIFICAR_HORA(2, "Modifica la hora de la centralita"),
@@ -45,16 +47,20 @@ public enum Comando {
     ENCENDER_CAMARA_SAL(26, "Enciende la camara"),
     APAGAR_CAMARA_SAL(27, "Apaga la camara");
 
+    // Atributos
     private int codigo;
 
     private String descripcion;
 
+    // Constructor parametrizado
     private Comando(int codigo, String descripcion) {
         this.codigo = codigo;
         this.descripcion = descripcion;
 
     }
 
+    
+    // Getters y setters
     public int getCodigo() {
         return this.codigo;
     }
