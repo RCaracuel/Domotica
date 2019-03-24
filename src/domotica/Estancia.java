@@ -11,16 +11,20 @@ package domotica;
  */
 public class Estancia {
     
+    // Atributos
     private int m2;
 
+    // Constructor por defecto
     public Estancia() {
         m2 = 0;
     }
 
+    // Constructor parametrizado
     public Estancia(int m2) {
         this.m2 = m2;
     }
 
+    // Getters y setters
     public int getM2() {
         return m2;
     }
@@ -29,6 +33,7 @@ public class Estancia {
         this.m2 = m2;
     }
 
+    // toString
     @Override
     public String toString() {
         return "Estancia{" + "m2=" + m2 + '}';
