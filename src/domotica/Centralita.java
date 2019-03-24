@@ -7,7 +7,6 @@ package domotica;
 
 import java.time.LocalDate;
 import java.time.LocalTime;
-import java.time.Month;
 import java.util.Scanner;
 
 /**
@@ -30,7 +29,7 @@ public class Centralita {
         garaje = new Garaje();
         salon = new Salon();
         dormitorio = new Dormitorio();
-        usu = new Usuario("Rosa", "123");
+        usu = new Usuario("usuario", "usuario");
         fechaInstalacion = LocalDate.now();
         identificador++;
         reloj=LocalTime.now();
