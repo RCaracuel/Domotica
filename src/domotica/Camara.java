@@ -65,26 +65,26 @@ public class Camara {
         LocalTime y = LocalTime.of(8, 00);
         LocalTime z = LocalTime.of(18, 00);
         LocalTime ahora = LocalTime.now();
-        Salon tmp;
-        Dormitorio tmp2;
+        Salon salontmp = new Salon();
+        Dormitorio dormitoriotmp = new Dormitorio();
 
         // Condiciones para el salon
         if (ahora.isAfter(x) && ahora.isBefore(y)) {
-            tmp.getLuz().setEstado(true);
-            tmp.getPersiana().setEstado(EstadoPersiana.SUBIDA);
+            salontmp.getLuz().setEstado(true);
+            salontmp.getPersiana().setEstado(EstadoPersiana.SUBIDA);
         } else if (ahora.isAfter(y) && ahora.isBefore(z)
-                && tmp.getPersiana().getEstado(EstadoPersiana.BAJADA)) {
-            tmp.getLuz().setEstado(true);
+                && salontmp.getPersiana().getEstado(EstadoPersiana.BAJADA)) {
+            salontmp.getLuz().setEstado(true);
         }
 
         // Condiciones para el dormitorio
         if (ahora.isAfter(x) && ahora.isBefore(y)) {
-            tmp2.getLuz().setEstado(true);
-            tmp2.getPersiana().setEstado(EstadoPersiana.SUBIDA);
+            dormitoriotmp.getLuz().setEstado(true);
+            dormitoriotmp.getPersiana().setEstado(EstadoPersiana.SUBIDA);
 
         } else if (ahora.isAfter(y) && ahora.isBefore(z)
-                && tmp2.getPersiana().getEstado(EstadoPersiana.BAJADA)) {
-            tmp2.getLuz().setEstado(true);
+                && dormitoriotmp.getPersiana().getEstado(EstadoPersiana.BAJADA)) {
+            dormitoriotmp.getLuz().setEstado(true);
         }
     }
 
