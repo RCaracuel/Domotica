@@ -11,5 +11,6 @@ package domotica;
  */
 public enum Orientacion {
     
+    // Orientaciones de las habitaciones
     NORTE, SUR, ESTE, OESTE;
 }
