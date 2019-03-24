@@ -13,21 +13,23 @@ import java.util.Objects;
  */
 public class Usuario {
     
+    // Atributos
     private String user;
     private String password;
 
+    // Constructor parametrizado
     public Usuario(String user, String password) {
         this.user = user;
         this.password = password;
     }
 
+    // toString
     @Override
     public String toString() {
         return "Usuario{" + "user=" + user + ", password=" + password + '}';
     }
 
-
-
+    // Getters y setters
     public String getUser() {
         return user;
     }
@@ -44,6 +46,7 @@ public class Usuario {
         this.password = password;
     }
 
+    // Metodos hashcode y equals
     @Override
     public int hashCode() {
         int hash = 5;
