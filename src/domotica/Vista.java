@@ -16,6 +16,7 @@ public class Vista {
     private static Scanner teclado = new Scanner(System.in);
     private static int opcion;
 
+    // Metodo login donde se crea un usuario con los datos que introduce el usuario
     public static Usuario login() {
 
         Usuario usu = new Usuario("pepito", "1245");
@@ -30,6 +31,7 @@ public class Vista {
 
     }
 
+    // Metodo comando del menu donde tenemos la estructura completa del menu con sus diferentes casos posibles
     public static Comando menu() {
 
         do {
