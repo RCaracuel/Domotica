@@ -10,18 +10,22 @@ package domotica;
  * @author Rafa
  */
 public enum EstadoPersiana {
+    // Estados de las persianas
     SUBIDA(0, "Persiana subida"),
     BAJADA(1, "Persiana bajada"),
     MITAD(2, "Persiana por la mitad");
 
+    // Atributos
     private int codigo;
     private String descripcion;
 
+    // Constructor parametrizado
     private EstadoPersiana(int codigo, String descripcion) {
         this.codigo = codigo;
         this.descripcion = descripcion;
     }
 
+    // Getters de los estados de la persiana
     public static EstadoPersiana getSUBIDA() {
         return SUBIDA;
     }
@@ -34,6 +38,7 @@ public enum EstadoPersiana {
         return MITAD;
     }
 
+    // Getters y setters
     public int getCodigo() {
         return codigo;
     }
